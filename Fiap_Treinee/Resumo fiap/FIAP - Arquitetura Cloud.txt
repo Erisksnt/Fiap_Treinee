@@ -1,0 +1,356 @@
+Arquitetura Cloud
+introdução a compuitação em nuvem
+o q e nuvem
+como funciona
+beneficios...
+
+escalabilidade vertical
+aumenta recurso da maquina (memoria cpu...)
+
+escalabilidade horizontal
+cria uma submaquina, uma outra maquina para segregar os serviços.
+adiciona mais nos e assim aumenta a capacidade
+
+elasticidade e esse ajuste automatico
+
+capex (despesas de capital)
+grandes investimentos iniciais
+ativos fixos
+depreciação ao longo do tempo
+manutenção propria
+
+opex (despesas operacionais)
+custos continuos por uso/assinatura
+dedução integral no ano
+maior flexibilidade orçamentaria
+manutenção do provedor
+(pagamento por uso)
+
+apresentação dos modelos de serviços (um iaas um saas e um paas)
+_______________________________________________________________
+modelos de serviços
+iaas tem um alto controle, menor abastração
+1 recursos virtuais (
+-servidores de armazenamento, redes
+- sem infra fisica)
+
+2 alto controle (gerencia SO, apps,dados... uma flexibilidade maxima)
+
+3 vantagem de ser muito mais escalavel
+
+paas (plataforma como serviço) maior foco em desenvolvimento
+- Desevolvimento de ferramentas ccolaborativas e controle de versões
+
+- Implementação (gerencia SO, apps, dados, flexibilidade bem maior)
+
+- Manutenção (Escalabilidade sob demanda. Reduz custos)
+
+saas pronto para uso, portanto uma alta abstração
+software como serviço
+hospedagem (onde o provedor gerencia tudo)
+acesso web (qualquer dispositivo pode acessar)
+multi-tenant (uma instancia, multiplos clientes)
+assinatura (custos previsiveis)
+
+faas orientado a eventos, sem servidor
+funções como servico (serverless)
+
+codigo - desenvolvedor foca no codigo
+
+orientado a eventos - funções ativadas por triggers
+
+custo otimizado - paga pelo tempo de execução
+
+escalabilidadde - automatica, de zero a demanda
+
+_________________________________
+comparativo e escolhas estrategicas
+iaas maxima flexibilidade e gerenciamento interno (maior controle)
+paas facilita desenvolvimento porem menor flexibilidade
+saas minimo esforço e personalização limitada
+faas executa funções ideal para eventos
+
+
+explicação como funciona nuvem publica (hospedar na nuvem publica)
+
+regioes vs zona de disponibilidade
+regiao- area geografica independente 
+tolerancia a flahas em larga escala
+baixa latencia entre zonas e regionais
+lugares que possuem datacenters
+
+zona de disponibilidade
+local isolado dentro de uma região
+isolamento de falhas na regiao
+alta largura de banda dentro da regiao
+zonais
+
+1 regiao pode ter varias zonas de disponibilidades
+
+01 - oque e latencia
+latencia e o tempo de resposta, ou seja o atraso na transmissao de dados
+
+02 - cdns (conteiner delivery networks) e pops sao conteudos mais proximo do usuario (pontos de presenças)
+
+03 - otimização de roteamento - de acordo com zonas
+
+04 - minizaçao do conteudo (ato de comprimir arquivos para carregar mais rapido)
+
+___________________________________________________
+
+escalabilidade vertical vs horizontal
+apenas relembrando vertical e quando eu aumento a capacidade do servidor como adicionando ram, cpu... ja a horizontal e quando distribuimos cargas de trabalho, adiciono mais maquinas ao sistema para uma maior flexibilidade e redundancia
+
+mecanismo de escalabilidade horizontal
+auto-scaliong (remove ou adiciona instancia conforme necessidade)
+load balancing (distribui requisições de forma eficiente)
+elasticidade (recursos provisionados automaticamente)
+
+Alta disponibilidade (ha - high availibity)
+para garantir o uptime
+
+metricas de ha
+(sli, slo, sla)
+sla -  service level agrement (acordado foi em 99% por exemplo)
+sli - service level indicator (o indicado foi o nivel real tipo 98,88% por exemplo)
+slo - service level objetive (o objetivo, que foi o acordado, ele foi cumprido? nesse exemplo nao)
+
+resumindo, sao metricas para definir a alta disponibilidades, definir e monitorar durante o uso para assim garantir o ha)
+
+sistemas redundantes 
+replicação de daos, multi-região e redundancia
+
+failover automatico
+ativo-passivo e ativo-ativo
+
+_________________________________________________
+Resiliencia
+Recuperação de falhas
+
+piramede - 
+topo prevenção de falhas (proteção contra falhas em cascatas)
+meio - padrao circuit breaker (impede operações de provavelmente falharão)
+base - autocura (permite a recuperação sem sobrecarga)
+
+resiliencia é diferente de alta disponibilidade
+
+Tolerancia a falhas e estrategia de replicação
+
+ciclo
+replicação de dados (copias em multiplos locais)
+replicação de componentes (duplicação de serviços)
+operação continua (sistema funcionando sem interrupção)
+
+
+Computação de borda - edge computing
+
+-01 processamento local
+-02 latencia menor 
+-03 largura de banda
+-04 sinergia com IOT 
+(empresa noping por exemplo)
+_________________________________
+
+persistencia de dados (banco de dados)
+banco relacionais (sql, postgre, mysql... onde tem estrutura rigida e transações ACID)
+
+nosql (nao relacionais)
+maior flexibilidade e escalabilidade horizontal (mongodb, cassandram redis)
+
+data warehousing
+otimizado para analise e relatorios. (Snowflake, amazon redshift)
+__________________________________________________
+
+load balancer
+(balanceadores de cargas)
+
+trabalham nas camadas 4 e 7
+camada 4 e de protocolos tcp, udp
+camada 7 e a de aplicação (http, https, roteamento inteligente entre as aplicações)
+
+algoritmos estaticos (Round-robin. Hash IP, Regras fixas)
+
+algoritimos dinamicos (conexões minimas, tempo de resposta e otimização de desempenho)
+_____________________________________________
+
+desing cloud native
+microserviços e independentes
+conteiners (empacotamento isolado)
+uma infra imutavel
+apis comunicação padronizada entre serviços
+
+principios de well-architected
+sustentabilidade
+otimização de custos 
+eficiencia de performance
+confiabilidade
+segurança
+excelencia operacional
+
+
+seding para performance e segurança
+
+performance
+- cashing para reduzin latencia
+- cdns para entrega de conteudo rapida
+- experiencia de usuario fluida
+
+Segurança
+menor privilegio com permissoes minimas
+defesa em profundidade contendo multiplas camadas
+secure by desingn que é uma segurança proativa
+
+segurança. custos e boas praticas
+responsabilidade compartilhada (divisoes de responsabildiades entre cliente e servidor)
+
+ferramentas de segurança (iam, criptografia, mfa, vpc, vpns)
+
+otimização de custo (estrategia para controlar despesas)
+
+melhores praticas (arquiteturas eficientes, seguras e economicas)
+
+---
+aplicação na pratica
+1- fundamentos de segurança (responsabilidades compartilhada e identidade)
+2- mecanismos de proteção (criptografica, mfa e redes seguras)
+3- gestão de custos (finops e governança na nuvem)
+4- melhores praticas (well-architected framework)
+---
+fundamentos de segurança em nuvem
+- panorama de ameaça (ameacas ciberneticas em evoluçção)
+- responsabilidade compartilhada (essa divisao deve ser clara entre cliente e provedor)
+- gerenciamento de identidade (autenticação, autorização e controle de acesso)
+----
+
+panorama de ameaças
+violação de dados (Ataques sofisticados e perdas de informaçções sensiveis)
+acessos nao autorizados (permissão iadequadas e flahas na autenticação)
+configurações (erros podem levar a violações ciberneticas)
+
+
+modelo de responsabilidades compartilhadas
+
+provedor de nuvem
+- infra fisica
+- redes
+- hardware e software base
+- serviços de computação
+
+x
+
+cliente
+- dados de aplicação
+- configuração de rede
+- sistema operacional
+- gerenciamento de acesso
+
+-----------------------------
+criptografia em transito (tls/ssl)
+
+conexões seguras (comunicação entre cliente e servidor previnindo interceptações)
+
+dados em movimento (garante informações transmitidas permanecam confiaveis
+
+anvegação segura (essencial para sites, apis e aplicações que trafegam dados sensiveis
+
+-
+criptografia em repouso (KMS: Key management Service)
+- Gere e gerencia chaves criptograficas
+-controle de acesso rigoroso as chaves
+- integração com serviços de armazenamento
+
+Como o MFA fortalece a segurança
+1 com o que voce sabe (senha ou pin)
+2 o quie vc tem (token, aplicativo, sms)
+3 quem e voce (biometria ou facial)
+
+
+Segurança de rede
+1 VPC/Sub-redes
+Isolamento logico da sua infraestrutura na nuvem
+
+2 NSG/Firewall
+controle de trafego de entrada e saida, filtrando conexões indesejadas.
+
+3 WAF (Web aplication Firewall)
+Protege aplicações web contrea ataques comuns como SQLi, XSS
+
+4 VPNs / Direct Connect
+Conexões seguras e privadas entre sua rede on-premise e a nuvem
+
+--------------------------------------
+
+desafio: Complexibilidade e custos
+crescimento exponencial. uso da nuvemaumenta, assim como as despesas
+falta de visibilidade. dificuldade em rastrear e alocar gastos
+recursos ociosos. pagamento por serviços nao utilizados
+
+FINOPS
+A PONTE ENTRE FINANÇAS E TI
+
+Cultura colaborativa (financas e TI Juntos para gerenciar cuustos da nuvem em tempo real)
+Visibilidade Total(Entenda como e onde seus recursos da nuvem estao sendo gastos)
+Otimização continua (Processo e automação para maximizar o valor da nuvem)
+
+Gestão inteligente de custos
+(circulo)
+Visibilidade - identificação de recursos e gastos
+otimização - instancia spot reservadas
+automação - processos continuos de otimização
+alerta - monitoramento de orçamentos
+
+**o que e maquina spot?
+Maquinas spot é uma maquina com custo mais baixos e periodo determinado, portanto se o provedor precisar da maquina, ele utilizara os recurso e dps se necessario eu solicito de volta
+
+- GOVERNANCA DA NUVEM
+utilização de tagging (identificar a maquina, catregorização de recursos)
+politicas, diretrizes operacionais (definição do sistema q será utilizado, por exemplo a politica da empresa exige q sempre utilize debian...)
+automação e aplicação consistente.
+auditoria e monitoramento contínuo.
+
+- governanca na pratica
+papeis e responsabilidades (as principais funçoes e suas responsabilidaes na nuvem
+ferramentas de automação (utilização IAC e CI/CD)
+Educação e treinamento (capacite as equipes para melhores praticas)
+Revisões periodicas (adapte as politicas e as necessidades)
+
+- falando de WELL ARCHITECTED FRAMEWORK (OQ E?)
+
+um conjunto de melhores praticas e principios para projetar e operar sistemas eficientes, seguros, resilientes e economicos na nuvem
+
+pilares 
+excelencia operacional
+segurança
+confiabilidade
+eficienca de performance
+otimização de custos 
+sustentebilidade
+
+excelencia operacional:
+infraestrutura como codigo (IAC)
+Observanilidade
+gerenciamento de mudança
+Automação de rotinas 
+
+Segurança:
+Gentao de identidade e acesso (iam)
+segurança em todas as camadas
+proteção de dados em repouso e em transito
+respostas a incidentes de segurança
+ 
+CONFIABILIDADE:
+Recuperação de desatres - planejamento para recuperacao rapida
+tolerancia a falahs - arquitetura resiliente
+escalabilidade - adaptação a demanda 
+
+aplicação pratica e trade-offs 
+~Equilibrio entre pilares 
+~segurança vs performance
+~custos vs confiabilidade
+~automação vs custos inicial
+/
+revisão periodicas
+~revisoies trimestrais
+~acompanhamento de novas tecnologias
+~feedback dos times
+

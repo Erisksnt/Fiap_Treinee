@@ -1,0 +1,23 @@
+Arquitetura de Aplicações
+
+introdução a monolito (o que é, diferença entre microserviços(serveless x monolito))
+
+(exemplo amazon que fez rollback do serveless para monolitico)
+
+mas oq e monolitico?
+arquitetura monolitica refere-se a um desing de softaware todos os componentes de uma aplicação sao interligados em uma unica unidade.
+Isso significa que o front e o back, logica, integração com banco... coeiste no mesmo bloco de codigo, implantados como uma unica entidade
+
+exemplo:
+
+recebe dados satelite 
+converter formato para apresentar na web
+apresenta em uma tela
+cortar videos
+upload rede social
+
+todos esse fluxo, estao dentro de uma mesma aplicação
+
+(1 Das caracteristicas de um sistema monolito é 1 banco de dados para toda a aplicação)
+
+---------------------------

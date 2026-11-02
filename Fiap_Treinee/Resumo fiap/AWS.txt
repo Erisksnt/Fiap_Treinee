@@ -1,0 +1,73 @@
+o que e aws?
+provider de cloud.
+
+dicas de boas praticas:
+Tags serve para organizar e auxliar nos rastreios
+utilize politicas de senhas fortes e MFA
+Verifique o estado da segurança no IAM Dashboard
+Revise periodicamente as permissões
+Utilize principio de menor privilegio
+Separe usuarios por grupos
+
+Regiao e zonas de disponibilidades
+Como escolher uma região?
+
+Cada região tem um preco e isso pode te auxiliar a escolher cada regiçao. portanto voce deve escolher a região pensando em seu projeto. Caso seja um projeto que ter uma menor latencia e um fator crucial, nao pense 2 vezes e fique com a região de sao paulo. Porem digamos que seu projeto sera um blog, uma pagina estavel q nao exige rapida resposta, opte por uma região como Ohide que os serviços sao mais baratos.
+O que é EC2?
+(basicamente maquina virtual contratada dentro da AWS)
+
+Instancia e definido pelos recursos que voce utilizara na sua maquina, portanto sera o tipo de processador, memoria (a juncao de processador e memoria ram é a instancia, exemplo a instancia t2.medium possui 2vCPU e 4GB Memoria)
+
+S3 - É um diretorio central de arquivos
+
+Amazon RDS é o servico de banco de dados caso queira um MYSQL, POSTGREE, MARIADB... 
+
+__________________________
+Falando de politicas de IAM
+Politicas de IAM e politicas de acesso - diz a respeito de liberar acesso conforme necessidades, tanto para usuarios quanto para grupos. Sempre tenha a boa pratica de liberar acesso somente a oq for necessario
+
+MFA - Multifator, uma sessao de segurança a mais que a senha, necessita de autenticar com um app, email, sms...
+(principio de menor privilegio)
+(lembre-se de usar tag)
+
+______________________
+OQ SAO VPS resumo basico
+_______________________
+oq sao ec2 e instancias (resuminho basico)
+___________________
+oq sao loadbalancer e como configurar (resuminho basico)
+____________________________
+oq sao conteiner e docker
+___________________________
+oq e fargate e ecs (resuminho basico)
+elastic conteiner sercver
+____________________
+Conceito Kubernets/EKS
+Pod
+Deployment
+service
+Ingress
+YAML
+______________________
+comparação ecs (cluster) x eks(conteiner)
+qual escolher?
+Upload muito intenso? utiliza eks
+___________________________
+banco de dados
+rds
+aurora
+dynamo
+_______________________
+lambda
+oq é lambda?
+sao funções q vao executar alguns processos.
+uma lambda sempre sera executada sob demanda e sem servidor
+escala automatica
+ideal para eventos e microsserviços
+automação de servicos
+failback de sistemas
+debug mais rapido
+
+labda sempre nasce com um evento,após a la
+
+
