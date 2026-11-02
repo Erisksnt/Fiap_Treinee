@@ -1,4 +1,4 @@
-# FIAP Treinee
+# Pos Graduação em DevOps e Arquitetura Cloud
 
 Repositório pessoal para organizar as anotações das aulas e as entregas dos desafios propostos ao longo do curso de pós-graduação em **DevOps e Arquitetura Cloud da FIAP**.
 
