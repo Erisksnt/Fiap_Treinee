@@ -69,5 +69,6 @@ failback de sistemas
 debug mais rapido
 
 labda sempre nasce com um evento,após a la
+.
 
 

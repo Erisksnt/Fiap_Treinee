@@ -6,7 +6,7 @@ As anotações registram os principais conceitos estudados durante as aulas. As 
 
 ## Organização
 
-- [`Resumo fiap/`](Resumo%20fiap/): anotações pessoais sobre os conteúdos das aulas.
+- [`Resumo Aulas/`](Resumo%20fiap/): anotações pessoais sobre os conteúdos das aulas.
 - [`TechChellenge-Fase1/`](TechChellenge-Fase1/): materiais do Tech Challenge da primeira fase, incluindo as solicitações de entrega e os respectivos arquivos desenvolvidos.
 
 ## Tech Challenges
